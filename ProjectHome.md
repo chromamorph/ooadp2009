@@ -1,0 +1,1 @@
+This repository is for storing code relating to the course on Object-Oriented Analysis, Design and Programming, taught by David Meredith in semester 4 of the Medialogy programme at Aalborg University in 2009.
