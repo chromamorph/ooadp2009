@@ -11,10 +11,13 @@ public class JavaIntro01HelloWorldOrArg {
 	 * @param args Array of Strings containing command-line parameters.
 	 */
 	public static void main(String[] args) {
-		if (args.length==0)
-			System.out.println("Hello world!");
-		else
-			System.out.println("Hello "+args[0]);
+		String s = "";
+		if (args.length > 0) {
+			for (String q: args) {
+				s += " " + q;
+			}
+		}
+		System.out.println("Hello world!"+s);
 	}
 }
 
