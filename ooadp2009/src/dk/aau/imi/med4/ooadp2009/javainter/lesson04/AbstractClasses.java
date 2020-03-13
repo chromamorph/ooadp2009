@@ -31,7 +31,7 @@ public class AbstractClasses {
 		
 		/*
 		 * The Circle and Rectangle classes are subclasses of Shape. They
-		 * are concrete classes, so we an instantiate them as follows:
+		 * are concrete classes, so we can instantiate them as follows:
 		 */
 		
 		Circle c1 = new Circle();
