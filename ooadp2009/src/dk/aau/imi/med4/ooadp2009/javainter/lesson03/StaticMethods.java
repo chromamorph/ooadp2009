@@ -22,6 +22,9 @@ public class StaticMethods {
 		/*
 		 * We now call the static method, getNumberOfGizmos to print out the 
 		 * number of Gizmos created.
+		 * 
+		 * Note that we call the getNumberOfGizmos() method on the class itself,
+		 * not on any specific instance of the class.
 		 */
 		System.out.println("numberOfGizmos = " + Gizmo.getNumberOfGizmos());
 
@@ -32,6 +35,7 @@ public class StaticMethods {
 		 * have parseXXX methods that interpret a String of characters as a 
 		 * numeric value.
 		 * 
+		 * Here are some examples
 		 */
 		
 		Integer i = Integer.parseInt("123");
