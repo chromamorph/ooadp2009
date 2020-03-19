@@ -39,24 +39,24 @@ public class Exceptions {
 		return output * multiplier;
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws InvalidArgumentException
 	// Can cause calling method to throw an exception:
 	// throws InvalidArgumentException
 	{
 		// Can surround with a try...catch block:
-		try {
+//		try {
 			System.out.println(parseInt("123"));
 			System.out.println(parseInt("0123"));
 			System.out.println(parseInt("-123"));
 			System.out.println(parseInt("-0123"));
-			System.out.println(parseInt("123.0"));
-			 System.out.println(parseInt("12c3"));
-			// System.out.println(parseInt("+123"));
-		} catch (InvalidArgumentException e) {
-			// Define what should be done if an InvalidArgumentException is
-			// caught:
-			e.printStackTrace();
-		}
+//			System.out.println(parseInt("123.0"));
+//			 System.out.println(parseInt("12c3"));
+			 System.out.println(parseInt("+123"));
+//		} catch (InvalidArgumentException e) {
+//			// Define what should be done if an InvalidArgumentException is
+//			// caught:
+//			e.printStackTrace();
+//		} 
 		// The following line only prints out when the try...catch block is
 		// used.
 		// If the main method is made to throw an exception, then the method

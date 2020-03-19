@@ -13,7 +13,7 @@ package dk.aau.imi.med4.ooadp2009.javainter.lesson05;
  * contract for a type.
  * 
  * A class can only extend a single superclass but it can implement more than
- * one interface. This means that a class can fulfill many different roles, each
+ * one interface. This means that a class can fulfil many different roles, each
  * defined by a different interface.
  * 
  * "Every major class in an application should be an implementation of some

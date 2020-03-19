@@ -45,7 +45,7 @@ public class Collections {
 		 * interface. A commonly used example of such a class is the ArrayList
 		 * class which is the Java Collection's answer to a normal array. An
 		 * ArrayList is cheap to create and fast for random access. It is
-		 * expensive to add or remove items from the beginning of a large
+		 * expensive to add to or remove items from the beginning of a large
 		 * ArrayList, but, on average, adding and remove elements to an
 		 * ArrayList is fast.
 		 */
