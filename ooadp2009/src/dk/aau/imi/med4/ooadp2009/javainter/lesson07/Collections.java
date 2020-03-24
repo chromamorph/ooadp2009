@@ -46,8 +46,8 @@ public class Collections {
 		 * class which is the Java Collection's answer to a normal array. An
 		 * ArrayList is cheap to create and fast for random access. It is
 		 * expensive to add to or remove items from the beginning of a large
-		 * ArrayList, but, on average, adding and remove elements to an
-		 * ArrayList is fast.
+		 * ArrayList, but, on average, adding elements to and removing elements 
+		 * from an ArrayList is fast.
 		 */
 
 		ArrayList<Point> a = new ArrayList<Point>();
@@ -73,7 +73,7 @@ public class Collections {
 
 		/*
 		 * Like every Java object, a Collection can be printed out. Note that,
-		 * because ArrayList is unordered, the Points are printed out in the
+		 * because ArrayList is unsorted, the Points are printed out in the
 		 * order they were added to the list.
 		 */
 
@@ -84,7 +84,7 @@ public class Collections {
 		 * Collection again.
 		 */
 
-		c.remove(p5);
+		c.remove(p5); //The first element for which p.equals(p5) is true
 		System.out.println(c);
 
 		/*
@@ -110,6 +110,7 @@ public class Collections {
 		 * different objects with the same state).
 		 */
 		System.out.println("p5 == p1 returns " + (p1 == p5));
+		System.out.println("p1 == p1 returns " + (p1 == p1));
 
 		/*
 		 * We determine the size of a Collection by calling its size() method.
@@ -145,7 +146,7 @@ public class Collections {
 		 * of the Set interface is HashSet.
 		 * 
 		 * Adding elements to and removing elements from a HashSet is very fast.
-		 * It is also very fast (constant time) to check whether a HashSet
+		 * It is also very fast (average constant time) to check whether a HashSet
 		 * contains an item.
 		 * 
 		 * However, you cannot guarantee that the elements in a HashSet are in
@@ -153,9 +154,16 @@ public class Collections {
 		 * know that the order of the elements is the order that we put them in
 		 * the list.
 		 * 
-		 * The HashSet decides whether two elements are "equal" or not using the
-		 * hashCode() method which should be overridden in the definition of the
-		 * element class.
+		 * The HashSet is a hash table, which is a special type of array. When we
+		 * put an element into a hash table, we decide on the slot in the hash table 
+		 * into which to put the new element by running a function on the new
+		 * element that returns an integer that we use as the index of the slot
+		 * in the hash table where we'll place the new element.
+		 * 
+		 * This means we have to define a hash function for the class of objects
+		 * that will be contained in the HashSet. Java provides a default hash
+		 * function, but we should usually try to define our own.
+		 * 
 		 */
 
 		HashSet<Point> h = new HashSet<Point>();
@@ -175,10 +183,10 @@ public class Collections {
 
 		/*
 		 * If you want a set in which all the elements are in a guaranteed
-		 * order, then you can use a TreeSet. Unlike HashSet, TreeSet uses the
-		 * equals() method to determine if two elements are equal (and refuses
-		 * to add a second element if it is equal to one that is already in the
-		 * set).
+		 * order, then you can use a TreeSet. TreeSet uses the
+		 * equals() method to determine if two elements are equal and refuses
+		 * to add the new element if it is equal to one that is already in the
+		 * set.
 		 * 
 		 * To store an object in a TreeSet, it must implement the Comparable<E>
 		 * interface. This means that you have to define a compareTo() method in

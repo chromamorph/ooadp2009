@@ -31,6 +31,13 @@ public class Point implements Comparable<Point>{
 		this.y = y;
 	}
 
+	/**
+	 * a.compareTo(b) < 0, then a < b
+	 * a.compareTo(b) > 0, then a > b
+	 * a.compareTo(b) == 0, then a.equals(b)
+	 * 
+	 * Here compareTo implements lexicographical ordering
+	 */
 	public int compareTo(Point o) {
 		if (o.getX() < getX()) return 1;
 		if (o.getX() > getX()) return -1;
@@ -57,7 +64,7 @@ public class Point implements Comparable<Point>{
 	
 	@Override
 	public int hashCode() {
-		return power(2, getX()) * power(3, getY());
+		return power(2, getX()) * power(3, getY()) % 10000;
 	}
 	
 	@Override
